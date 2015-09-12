@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+	<head>
+		<title>DRRR！ - ( ゜- ゜)つロ 乾杯~</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+		<!-- <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet"> -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/colpick.min.css">
+		<!-- <link rel="stylesheet" type="text/css" href="css/colpic.css"> -->
+	</head>
+	<body>
+		<audio id="audio">
+			<source src="sound/message.wav" type="audio/wav">
+			<source src="sound/message.mp3" type="audio/mp3">
+		</audio>
+		<ul class="pages">
+			<li class="login page">
+				<div class="generalForm">
+					<div class="generalLine">
+						<label>username</label>
+						<input type="text" class="usernameInput generalInput">
+					</div>
+					<div class="generalLine">
+						<label>password</label>
+						<input type="password" class="passwordInput generalInput">
+					</div>
+					<div>
+						<label class="inviteCodeLabel clickLabel"
+							title="click to get current available invite code">
+							Get invite code
+						</label>&nbsp;
+						<label class="toChatRoomLabel clickLabel"
+							title="click to join the chat room">
+							To chat room
+						</label>&nbsp;
+						<label class="toRegisterLabel clickLabel"
+							title="click to sign up a new user">
+							To register
+						</label>
+					</div>
+				</div>
+			</li>
+			<li class="invite page">
+				<div class="generalForm">
+					<div class="generalLine">
+						<label>inviter</label>
+						<input type="text" class="inviterInput generalInput">
+					</div>
+					<div class="generalLine">
+						<label class="inviteCodeLineUnit">invite code</label>
+						<input type="text" class="inviteCodeInput generalInput inviteCodeLineUnit">
+					</div>
+					<label class="invite clickLabel">Go on</label>
+				</div>
+			</li>
+			<li class="register page">
+				<div class="registerForm container form-horizontal">
+					<div class="form-group">
+						<label class="control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">username</label>
+						<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+							<input type="text" class="usernameRegister form-control">
+						</div>
+						<span class="usernameAvailable wrong"></span>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">password</label>
+						<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+							<input type="password" class="passwordRegister form-control">
+						</div>
+						<span class="passwordRequired wrong"></span>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">password confirm</label>
+						<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+							<input type="password" class="passwordConfirm form-control">
+						</div>
+						<span class="passwordMatch wrong"></span>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">simplified name</label>
+						<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+							<input type="text" class="simplifiedName form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">icon color</label>
+						<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+							<div class="color-box form-control"></div>
+						</div>
+						<div id="icon" class="col-xs-offset-7 col-sm-offset-7 col-md-offset-7 col-lg-offset-7"></div>
+					</div>
+					<div class="col-xs-offset-3 col-sm-offset-3 col-md-offset-3 col-lg-offset-3">
+						<button class="register btn" type="button">Register</button>
+					</div>
+				</div>
+			</li>
+			<li class="chat page">
+				<div class="nav"><label class="logoutLabel">logout&nbsp;</label></div>
+				<div class ="messages"></div>
+				<div class="input-group form">
+					<input type="text" class="messageInput form-control" id="m" placeholder="Type here..." autocomplete="off">
+					<span class="input-group-btn">
+						<button class="send btn btn-warning" type="button"><b>Send</b></button>
+					</span>
+				</div><!-- /input-group -->
+			</li>
+		</ul>
+	</body>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="socket.io/socket.io.js"></script>
+	<script src="js/colpick.min.js"></script>
+	<!-- <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script> -->
+	<!-- <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+	<script src="js/main.js"></script>
+</html>
