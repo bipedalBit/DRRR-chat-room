@@ -114,14 +114,16 @@ function encodeHTML(str) {
 }
 
 function showMessage(data) {
-	var icon = '<div class="icon" style="background-color:#'
-		+ data.color + '" title="' + data.username + '">' + data.simpName + '</div>';
-	var head = '<div class="tag" style="background-color:#'
-		+ data.color + '"><div class="arrow"><em style="border-color: transparent #'
-		+ data.color + ' transparent transparent;"></em></div>';
-	var tail = '</div>';
+	var setColor = 'style="background-color:#'+data.color+'"';
+	var icon = '<div class="icon" '+setColor+'>'+data.simpName+'</div>';
+	var id = '<div class="id">'+data.username+'</div>';
+	var head = '<div class="head">'+icon+id+'</div>';
+	var arrow1 = '<div class="arrow1"><em style="border-color: transparent while transparent transparent;"></em></div>';
+	var arrow2 = '<div class="arrow2"><em style="border-color: transparent #'+data.color+' transparent transparent;"></em></div>';
+	var tag = '<div class="tag" '+setColor+'>'+arrow1+arrow2+data.message+'</div>';
+	var message = '<div>'+head+tag+'</div>';
 	$audio.play();
-	$messages.append(icon + head + data.message + tail);
+	$messages.append(message);
 	$messages.scrollTop($messages[0].scrollHeight - $messages.height());
 };
 

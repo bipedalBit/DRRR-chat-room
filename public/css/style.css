@@ -119,18 +119,27 @@
 	bottom: 42px;
 	overflow:auto;/* winphone8和android4+ */
 }
-.icon {
-	clear: both;
-	float: left;
+.head {
 	width: 60px;
-	height: 60px;
-	border: 1px solid white;
+	margin-left: 5px;
 	margin-top: 5px;
 	margin-bottom: 5px;
-	margin-left: 5px;
+	clear: both;
+	float: left;
+}
+.icon {
+	width: 60px;
+	height: 60px;
+	border-radius:10px;
+	border: 2px solid white;
 	font-size: 40px;
 	text-align: center;
 	vertical-align: middle;
+}
+.id {
+	width: 60px;
+	color: white;
+	text-align: center;
 }
 .tag {
 	float: left;
@@ -139,24 +148,43 @@
 	margin-left: 30px;
 	margin-top: 10px;
 	padding: 7px;
-	border-radius:7px;
+	border-radius:10px;
+	border: 2px solid white;
 	font-size: 24px;
 }
-.arrow {
+.arrow1 {
 	position: absolute;
 	width: 10px;
-	height: 10px;
+	height: 8px;
 	left: -20px;
-	top: 14px;
+	top: 15px;
 }
-.arrow * {
+.arrow1 * {
 	display: block;
 	position: absolute;
 	border-style: dashed solid dashed dashed;
 	font-size: 0;
 	line-height: 0;
 }
-.arrow em {
+.arrow1 em {
+	border-width: 10px 10px;
+	border-color: transparent white transparent transparent;
+}
+.arrow2 {
+	position: absolute;
+	width: 10px;
+	height: 8px;
+	left: -17.172px;
+	top: 15px;
+}
+.arrow2 * {
+	display: block;
+	position: absolute;
+	border-style: dashed solid dashed dashed;
+	font-size: 0;
+	line-height: 0;
+}
+.arrow2 em {
 	border-width: 10px 10px;
 }
 .sysMsg {
